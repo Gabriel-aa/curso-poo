@@ -67,6 +67,24 @@ if(!isset($cliente))
             </div>
         </div>
 
+        <?php
+        if($cliente->getEnderecoCobranca() !== null)
+        {
+            ?>
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Endereço de Cobrança</h3>
+                    </div>
+                    <div class="panel-body">
+                        <?php echo $cliente->getEnderecoCobranca(); ?>
+                    </div>
+                </div>
+            </div>
+            <?php
+        }
+        ?>
+
         <div class="col-sm-6">
             <div class="panel panel-default">
 
@@ -94,7 +112,7 @@ if(!isset($cliente))
                         <?php
                     }
                 ?>
-                
+
             </div>
         </div>
 
@@ -116,6 +134,17 @@ if(!isset($cliente))
                 </div>
                 <div class="panel-body">
                     <?php echo $cliente->getTelefone(); ?>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Importância</h3>
+                </div>
+                <div class="panel-body">
+                    <?php echo $cliente->getImportancia(); ?>
                 </div>
             </div>
         </div>

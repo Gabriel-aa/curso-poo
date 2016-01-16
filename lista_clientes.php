@@ -18,7 +18,10 @@ $cliente->setCpf('123')
         ->setDataNascimento('11/06/1990')
         ->setSexo('M')
         ->setNome('Gabriel')
-        ->setTelefone(341234);
+        ->setTelefone(341234)
+        ->setImportancia(1)
+        ->setEnderecoCobranca('qweipzl')
+;
 
 array_push($clientes, $cliente);
 
@@ -30,7 +33,9 @@ $cliente->setCnpj('231')
         ->setDataNascimento('12/06/1990')
         ->setSexo('M')
         ->setNome('Daniel')
-        ->setTelefone(58978575);
+        ->setTelefone(58978575)
+        ->setImportancia(2)
+;
 
 array_push($clientes, $cliente);
 
@@ -42,7 +47,9 @@ $cliente->setCnpj('321')
         ->setDataNascimento('13/06/1990')
         ->setSexo('M')
         ->setNome('Raphael')
-        ->setTelefone(3412567);
+        ->setTelefone(3412567)
+        ->setImportancia(3)
+;
 
 array_push($clientes, $cliente);
 
@@ -54,7 +61,9 @@ $cliente->setCpf('456')
         ->setDataNascimento('14/06/1990')
         ->setSexo('F')
         ->setNome('Thais')
-        ->setTelefone(324145189);
+        ->setTelefone(324145189)
+        ->setImportancia(4)
+;
 
 array_push($clientes, $cliente);
 
@@ -67,7 +76,10 @@ $cliente->setCpf('654')
         ->setDataNascimento('15/06/1990')
         ->setSexo('F')
         ->setNome('Maria')
-        ->setTelefone(109201923);
+        ->setTelefone(109201923)
+        ->setImportancia(5)
+        ->setEnderecoCobranca('zxcvqwqe')
+;
 
 array_push($clientes, $cliente);
 
@@ -79,7 +91,10 @@ $cliente->setCnpj('678')
         ->setDataNascimento('16/06/1990')
         ->setSexo('F')
         ->setNome('Joana')
-        ->setTelefone(120923012);
+        ->setTelefone(120923012)
+        ->setImportancia(4)
+        ->setEnderecoCobranca('xvcqpwoe')
+;
 
 array_push($clientes, $cliente);
 
@@ -91,7 +106,9 @@ $cliente->setCpf('876')
         ->setDataNascimento('17/06/1990')
         ->setSexo('M')
         ->setNome('Caio')
-        ->setTelefone(921938128);
+        ->setTelefone(921938128)
+        ->setImportancia(3)
+;
 
 array_push($clientes, $cliente);
 
@@ -103,7 +120,9 @@ $cliente->setCnpj('512')
         ->setDataNascimento('18/06/1990')
         ->setSexo('F')
         ->setNome('Laura')
-        ->setTelefone(12390809);
+        ->setTelefone(12390809)
+        ->setImportancia(2)
+;
 
 array_push($clientes, $cliente);
 
@@ -115,7 +134,10 @@ $cliente->setCpf('821')
         ->setDataNascimento('19/06/1990')
         ->setSexo('M')
         ->setNome('Ricardo')
-        ->setTelefone(75487331);
+        ->setTelefone(75487331)
+        ->setImportancia(1)
+        ->setEnderecoCobranca('poiajsdf')
+;
 
 array_push($clientes, $cliente);
 
@@ -127,6 +149,8 @@ $cliente->setCpf('1029323')
         ->setDataNascimento('20/06/1990')
         ->setSexo('F')
         ->setNome('Betânia')
-        ->setTelefone(902832716);
+        ->setTelefone(902832716)
+        ->setImportancia(4)
+;
 
 array_push($clientes, $cliente);
