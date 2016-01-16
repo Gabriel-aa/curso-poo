@@ -103,4 +103,6 @@ if(!isset($cliente))
 
     </div>
 
+    <button class="btn btn-primary" onclick="window.location='index.php'"><- Voltar</button>
+
 </div>
