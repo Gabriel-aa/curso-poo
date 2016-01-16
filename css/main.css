@@ -1,0 +1,35 @@
+.table-title
+{
+    font-size: 25px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.img_seta
+{
+    float: left;
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 5px 0 0 5px;
+}
+
+th span
+{
+    float: left;
+}
+
+tr
+{
+    cursor: pointer;
+}
+
+[class^="cliente_"]
+{
+    background-color: #4cae4c !important;
+}
+
+.btn_ordem_form, .btn_cliente
+{
+    display: none;
+}

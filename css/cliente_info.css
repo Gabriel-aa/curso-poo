@@ -1,0 +1,10 @@
+.campo_titulo
+{
+    text-align: center;
+    border: 1px solid black;
+}
+
+.info .col-sm-6
+{
+    min-height: 140px;
+}

@@ -1,0 +1,25 @@
+.container-fluid
+{
+    padding: 0 !important;
+}
+
+.header
+{
+    background-color: #222222;
+    text-align: center;
+    height: 80px;
+    margin-bottom: 40px;
+}
+
+.header h1
+{
+    color: white;
+}
+
+.titulo
+{
+    font-size: 25px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+}
