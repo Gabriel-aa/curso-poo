@@ -37,7 +37,7 @@ else
 
     <table class="table table-striped">
         <thead>
-            <th> <span>ID</span>  <img class="img_seta img-responsive" onclick="mudarOrdem('down')" src="images/<?php echo $ordem?>.png"></th>
+            <th><span>ID</span>  <img class="img_seta img-responsive" onclick="mudarOrdem('down')" src="images/<?php echo $ordem?>.png"></th>
             <th>Nome</th>
             <th>E-mail</th>
         </thead>
