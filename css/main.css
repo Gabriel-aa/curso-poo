@@ -19,9 +19,14 @@ th span
     float: left;
 }
 
-[class^="cliente_"]
+tr
 {
-    background-color: #4cae4c !important;
+    cursor: pointer;
+}
+
+th
+{
+    cursor: default;
 }
 
 .btn_ordem_form, .btn_cliente
