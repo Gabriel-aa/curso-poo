@@ -1,7 +1,6 @@
 <?php
 
-include "header.html";
-include "Cliente.php";
+include "header.php";
 include "lista_clientes.php";
 
 $id = $_GET['id'] ?? header("location:index.php");
@@ -9,7 +8,7 @@ $id = $_GET['id'] ?? header("location:index.php");
 //Seleciona o cliente
 foreach($clientes as $c)
 {
-    if($c->id == $id)
+    if($c->getId() == $id)
     {
         $cliente = $c;
     }
@@ -40,8 +39,8 @@ if(!isset($cliente))
                     <h3 class="panel-title">Nome</h3>
                 </div>
                 <div class="panel-body">
-                    <?php echo $cliente->nome; ?><br>
-                    Sexo: <?php echo $cliente->sexo; ?>
+                    <?php echo $cliente->getNome(); ?><br>
+                    Sexo: <?php echo $cliente->getSexo(); ?>
                 </div>
             </div>
         </div>
@@ -52,7 +51,7 @@ if(!isset($cliente))
                     <h3 class="panel-title">E-mail</h3>
                 </div>
                 <div class="panel-body">
-                    <?php echo $cliente->email; ?>
+                    <?php echo $cliente->getEmail(); ?>
                 </div>
             </div>
         </div>
@@ -63,19 +62,39 @@ if(!isset($cliente))
                     <h3 class="panel-title">Endereço</h3>
                 </div>
                 <div class="panel-body">
-                    <?php echo $cliente->endereco; ?>
+                    <?php echo $cliente->getEndereco(); ?>
                 </div>
             </div>
         </div>
 
         <div class="col-sm-6">
             <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">CPF</h3>
-                </div>
-                <div class="panel-body">
-                    <?php echo $cliente->cpf; ?>
-                </div>
+
+                <?php
+                    if(strpos($cliente->getClassName(), 'Fisico'))
+                    {
+                        ?>
+                        <div class="panel-heading">
+                            <h3 class="panel-title">CPF</h3>
+                        </div>
+                        <div class="panel-body">
+                            <?php echo $cliente->getCpf(); ?>
+                        </div>
+                        <?php
+                    }
+                    else
+                    {
+                        ?>
+                        <div class="panel-heading">
+                            <h3 class="panel-title">CNPJ</h3>
+                        </div>
+                        <div class="panel-body">
+                            <?php echo $cliente->getCnpj(); ?>
+                        </div>
+                        <?php
+                    }
+                ?>
+                
             </div>
         </div>
 
@@ -85,7 +104,7 @@ if(!isset($cliente))
                     <h3 class="panel-title">Data de Nascimento</h3>
                 </div>
                 <div class="panel-body">
-                    <?php echo $cliente->data_nascimento; ?>
+                    <?php echo $cliente->getDataNascimento(); ?>
                 </div>
             </div>
         </div>
@@ -96,13 +115,13 @@ if(!isset($cliente))
                     <h3 class="panel-title">Telefone</h3>
                 </div>
                 <div class="panel-body">
-                    <?php echo $cliente->telefone; ?>
+                    <?php echo $cliente->getTelefone(); ?>
                 </div>
             </div>
         </div>
 
     </div>
 
-    <button class="btn btn-primary" onclick="window.location='index.php'"><- Voltar</button>
+    <button class="btn btn-primary" onclick="window.location='index.php'">Voltar</button>
 
 </div>

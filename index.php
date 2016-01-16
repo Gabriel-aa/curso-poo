@@ -1,6 +1,5 @@
 <?php
 
-include "Cliente.php";
 include "lista_clientes.php";
 
 //Ordenação da lista de clientes
@@ -22,12 +21,12 @@ else
     $opcao = "up";
 }
 
-
 ?>
 
-<link rel="stylesheet" href="css/main.css">
+<?php include "header.php"; ?>
 
-<?php include "header.html"; ?>
+<link rel="stylesheet" href="css/main.css">
+<script src="js/main.js"></script>
 
 <div class="container">
 
@@ -37,9 +36,12 @@ else
 
     <table class="table table-striped">
         <thead>
-            <th><span>ID</span>  <img class="img_seta img-responsive" onclick="mudarOrdem('down')" src="images/<?php echo $ordem?>.png"></th>
-            <th>Nome</th>
-            <th>E-mail</th>
+            <tr>
+                <th><span>ID</span>  <img class="img_seta img-responsive" onclick="mudarOrdem('down')" src="images/<?php echo $ordem?>.png"></th>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Pessoa</th>
+            </tr>
         </thead>
 
         <tbody>
@@ -47,10 +49,22 @@ else
             foreach($clientes as $cliente)
             {
                 ?>
-                <tr  class="<?php echo $cliente->id?>" onclick="mostrar_cliente()" onmouseover="destacar(this)" onmouseout="retirar_destaque(this)">
-                <td><?php echo $cliente->id ?></td>
-                <td><?php echo $cliente->nome ?></td>
-                <td><?php echo $cliente->email ?></td>
+                <tr  class="<?php echo $cliente->getId()?>" onclick="mostrar_cliente()" onmouseover="destacar(this)" onmouseout="retirar_destaque(this)">
+                    <td><?php echo $cliente->getId() ?></td>
+                    <td><?php echo $cliente->getNome() ?></td>
+                    <td><?php echo $cliente->getEmail() ?></td>
+                    <td>
+                        <?php
+                            if(strpos($cliente->getClassName(), 'Fisico'))
+                            {
+                                echo 'Física';
+                            }
+                            else
+                            {
+                                echo 'Jurídica';
+                            }
+                        ?>
+                    </td>
                 </tr>
                 <?php
             }
